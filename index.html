@@ -67,6 +67,37 @@
             <audio id="player" autoplay loop>
                 <source src="./nhac1.mp3" type="audio/mp3">
             </audio>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phát Âm Thanh</title>
+</head>
+<body>
+
+<!-- Nút để phát hoặc dừng âm thanh -->
+<button id="playPauseButton">Phát Âm Thanh</button>
+
+<script>
+var audio = new Audio('./music.mp3');
+var playPauseButton = document.getElementById("playPauseButton");
+
+// Bắt sự kiện khi nhấn nút phát hoặc dừng
+playPauseButton.onclick = function() {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.innerHTML = "Dừng Âm Thanh";
+    } else {
+        audio.pause();
+        playPauseButton.innerHTML = "Phát Âm Thanh";
+    }
+};
+</script>
+
+</body>
+</html>
+
         </div>
         <script>
             if (document.location.search.match(/type=embed/gi)) {
